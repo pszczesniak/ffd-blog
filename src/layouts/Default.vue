@@ -7,7 +7,7 @@
         </strong>
         <nav class="nav">
           <ToggleTheme />
-          <g-link class="nav__link" to="/">Home</g-link>
+          <!-- <g-link class="nav__link" to="/">Home</g-link> -->
           <g-link class="nav__link" to="/blog">Blog</g-link>
           <g-link class="nav__link" to="/about/">About</g-link>
         </nav>
@@ -70,5 +70,11 @@ query {
 
 .nav__link {
   margin-left: 20px;
+  color: var(--link-color);
+  text-decoration: none;
+
+  &.active {
+    text-decoration: underline;
+  }
 }
 </style>

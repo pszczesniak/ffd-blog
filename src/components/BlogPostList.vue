@@ -33,6 +33,10 @@ export default {
 .post {
   padding: 12px 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 0 0 36px 0;
+  }
+
   &-list {
     margin-top: 60px;
   }
@@ -47,8 +51,17 @@ export default {
     text-underline-offset: 2px;
     transition: text-decoration-color 0.3s;
 
-    &:hover {
-      text-decoration-color: var(--gradient-from-color);
+    @media screen and (max-width: 768px) {
+      display: block;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 4px;
+    }
+
+    // hover state only when is supportedby device (disable it on mobiles)
+    @media (hover: hover) {
+      &:hover {
+        text-decoration-color: var(--gradient-from-color);
+      }
     }
   }
 
@@ -56,6 +69,11 @@ export default {
     margin: 0;
     font: {
       size: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 8px;
     }
   }
 

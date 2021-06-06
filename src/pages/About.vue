@@ -2,7 +2,7 @@
   <Layout>
     <header>
       <div class="container">
-        <h1>Blog</h1>
+        <h1>About</h1>
       </div>
     </header>
     <main class="container">

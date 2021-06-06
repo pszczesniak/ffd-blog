@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article>
+    <article class="container">
       <header>
         <p>Published on <time :datetime="new Date($page.post.date).toISOString()">{{ $page.post.date }}</time></p>
         <h2>{{ $page.post.title }}</h2>
