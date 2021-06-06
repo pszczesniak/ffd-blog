@@ -1,0 +1,17 @@
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include sizeAboveFullHD('max-width', 960);
+
+    &-large {
+        @extend .container;
+        max-width: 1280px;
+
+        @include sizeAboveFullHD('max-width', 1280);
+    }
+}

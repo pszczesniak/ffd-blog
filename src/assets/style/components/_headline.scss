@@ -1,0 +1,33 @@
+
+%commonStyles {
+    margin: 0 0 0.2em 0;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.headline-1 {
+    @extend %commonStyles;
+    font: {
+        size: 10vw;
+    }
+}
+
+.headline-2 {
+    @extend %commonStyles;
+    font: {
+        size: 40px;
+    }
+}
+
+.headline-3 {
+    @extend %commonStyles;
+    font: {
+        size: 24px;
+    }
+}
+
+.lead {
+    font: {
+        size: 24px;
+    }
+}
