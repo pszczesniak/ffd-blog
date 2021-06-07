@@ -72,9 +72,13 @@ query {
   margin-left: 20px;
   color: var(--link-color);
   text-decoration: none;
+  font-weight: bold;
 
   &.active {
     text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: var(--body-color);
+    text-underline-offset: 3px;
   }
 }
 </style>
