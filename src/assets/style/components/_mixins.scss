@@ -8,9 +8,9 @@ $base-font-size: 16px;
 }
 
 @mixin sizeAboveFullHD($type, $pixelSize) {
-    $containerValueCalculated: ($pixelSize / 1365) * 100;
+    $containerValueCalculated: ($pixelSize / 1921) * 100;
 
-    @media (min-width: 1365px) {
+    @media (min-width: 1921px) {
         #{$type}: ($containerValueCalculated)+vw;
     }
 }

@@ -33,5 +33,11 @@ h1 {
   background-position: 0 100%;
   background-size: 100% 20px;
   background-repeat: repeat-x;
+
+  @include sizeAboveFullHD('font-size', 64);
+
+  @media screen and (min-width: 1921px) {
+    background-size: 100% 1.4652vw;
+  }
 }
 </style>

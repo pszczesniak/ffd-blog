@@ -1,0 +1,40 @@
+
+.content {
+
+
+    h1 {
+        font-size: 42px;
+
+        @include sizeAboveFullHD('font-size', 42);
+    }
+
+    h2 {
+        font-size: 36px;
+
+        @include sizeAboveFullHD('font-size', 36);
+    }
+
+    h3 {
+        font-size: 32px;
+
+        @include sizeAboveFullHD('font-size', 32);
+    }
+
+    h4 {
+        font-size: 28px;
+
+        @include sizeAboveFullHD('font-size', 28);
+    }
+
+    h5 {
+        font-size: 24px;
+
+        @include sizeAboveFullHD('font-size', 24);
+    }
+
+    h6 {
+        font-size: 18px;
+
+        @include sizeAboveFullHD('font-size', 18);
+    }
+}

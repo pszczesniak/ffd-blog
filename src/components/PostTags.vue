@@ -27,6 +27,9 @@ export default {
     border-radius: var(--radius);
     transition: color 0.25s, background-color 0.25s;
 
+    @include sizeAboveFullHD('font-size', 16);
+    @include sizeAboveFullHD('padding', 8);
+
     &:hover {
       background-color: var(--gradient-to-color);
       color: var(--blog-link-color);
