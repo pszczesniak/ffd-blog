@@ -6,7 +6,7 @@
 
     <header class="header">
       <div class="header__container">
-        <h1 class="main-headline"><span>Frontend</span> <span>For</span> <span>Developers</span></h1>
+        <h1 class="main-headline"><span>Frontend</span> <span>For</span> <span>Developers <em class="blinking-cursor"></em></span></h1>
       </div>
     </header>
 
@@ -42,6 +42,7 @@ export default {
   margin: 0;
   font: {
     size: 10vw;
+    family: 'Paytone One', sans-serif;
   }
 
   span {
@@ -53,6 +54,9 @@ export default {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 0.85;
+
+     font-family: 'Dynalight', cursive;
+     font-size: 15vw;
     }
 
     &:nth-child(2) {
@@ -76,14 +80,17 @@ export default {
     }
 
     &:nth-child(3) {
-      // font-style: italic;
-      // font-weight: 800;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       background-color: var(--body-color);
       color: var(--bg-color);
       line-height: 1;
       margin-top: 1rem;
       padding: 0 10px 10px 10px;
       text-align: right;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 9vw;
     }
   }
 }
@@ -102,6 +109,24 @@ export default {
     max-width: 960px;
 
     @include sizeAboveFullHD('max-width', 960);
+  }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  height: 8vw;
+  width: 10px;
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--bg-color);
   }
 }
 

@@ -69,16 +69,83 @@ query {
 }
 
 .nav__link {
+  position: relative;
   margin-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  white-space: nowrap;
   color: var(--link-color);
   text-decoration: none;
-  font-weight: bold;
+
+  @include sizeAboveFullHD('font-size', 18);
+
+  &:before,
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: -3px;
+    left: 0;
+    pointer-events: none;
+  }
+
+  &:before {
+    height: 28px;
+    top: -3px;
+    opacity: 0;
+    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  }
+
+  &:after {
+    transition: opacity 0.3s;
+    opacity: 0;
+    transition-delay: 0s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+      animation: lineUp 0.3s ease forwards;
+    }
+
+    &:after {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+  }
 
   &.active {
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--body-color);
-    text-underline-offset: 3px;
+    &:before {
+      opacity: 1;
+      animation: lineUp 0.0s ease forwards;
+    }
   }
 }
+
+@keyframes lineUp {
+  0% {
+      transform-origin: 50% 100%;
+      transform: scale3d(1, 0.045, 1);
+  }
+
+  50% {
+      transform-origin: 50% 100%;
+      transform: scale3d(1, 1, 1);
+  }
+
+  51% {
+      transform-origin: 50% 0%;
+      transform: scale3d(1, 1, 1);
+  }
+
+  100% {
+      transform-origin: 50% 0%;
+      transform: scale3d(1, 0.045, 1);
+  }
+}
+
 </style>
