@@ -63,7 +63,19 @@ hr {
 
 pre {
     font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    // font-size: 1em; /* 2 */
+}
+
+pre {
+    border-radius: 8px;
+    font-size: 75%;
+    line-height: 1.5;
+    overflow: auto;
+    padding: 16px;
+
+    @media (min-width: 1921px) {
+        font-size: 90%;
+    }
 }
 
 /* Text-level semantics

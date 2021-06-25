@@ -19,6 +19,11 @@ module.exports = {
             create: true
           }
         },
+        remark: {
+          plugins: [
+            [ 'gridsome-plugin-remark-shiki', { theme: 'monokai', skipInline: false } ]
+          ]
+        },
       },
     },
     {

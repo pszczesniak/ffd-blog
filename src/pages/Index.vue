@@ -91,6 +91,8 @@ export default {
       text-align: right;
       font-family: 'Courier New', Courier, monospace;
       font-size: 9vw;
+
+      @include sizeAboveFullHD('font-size', 140);
     }
   }
 }
@@ -119,6 +121,9 @@ export default {
   border-radius: 4px;
   background-color: var(--bg-color);
   animation: 1s blink step-end infinite;
+
+  @include sizeAboveFullHD('height', 120);
+  
 }
 
 @keyframes blink {
