@@ -7,7 +7,6 @@
         </strong>
         <nav class="nav">
           <ToggleTheme />
-          <!-- <g-link class="nav__link" to="/">Home</g-link> -->
           <g-link class="nav__link" to="/blog">Blog</g-link>
           <g-link class="nav__link" to="/about/">About</g-link>
         </nav>
@@ -55,6 +54,7 @@ query {
   height: 80px;
   display: flex;
   backdrop-filter: blur(4px);
+  background-color: var(--bg-color);
 
   .container {
     display: flex;

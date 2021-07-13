@@ -6,15 +6,15 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--body-color);
-    transition: color .3s, background-color .3s;
-    // font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     margin: 80px 0 0 0;
     padding: 0;
     font-size: 18px;
     font-family: 'Quicksand', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--body-color);
+    transition: color .3s, background-color .3s;
+    overflow-y: scroll;
 
     p,
     li,

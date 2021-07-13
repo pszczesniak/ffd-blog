@@ -1,16 +1,16 @@
 <template>
   <Layout>
-    <article class="container">
-      <header>
-        <p>Published on <time :datetime="new Date($page.post.date).toISOString()">{{ $page.post.date }}</time></p>
-        <h2>{{ $page.post.title }}</h2>
+    <article class="container-small">
+      <header class="article-header">
+        <p class="article-header__date">Published on <time :datetime="new Date($page.post.date).toISOString()">{{ $page.post.date }}</time></p>
+        <h2 class="article-header__headline">{{ $page.post.title }}</h2>
 
-        <p>
-          <i>{{ $page.post.timeToRead }}min to read</i>
+        <p class="article-header__time-to-read">
+          ⌚ <span>{{ $page.post.timeToRead }}min to read</span>
         </p>
       </header>
 
-      <div class="post__footer">
+      <div class="post__footer text-center">
         <PostTags :post="$page.post" />
       </div>
 
@@ -34,18 +34,30 @@ export default {
 </script>
 
 <style lang="scss">
-article > header {
-  // text-align: center;
+.article-header {
+  padding-top: 36px;
 
-  h2 {
-    font: {
+  &__time-to-read {
+    padding: {
+      top: 1.5rem;
+      bottom: 1.5rem;
+    }
+    text-align: center;
+  }
+
+  &__date {
+    font-size: 80%;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  &__headline {
+    margin: 0;
+        font: {
       size: 4em;
       weight: bold;
     }
-    margin: 0;
     line-height: 1;
-    // text-decoration: underline;
-
     background: linear-gradient(to left, var(--gradient-from-color), var(--gradient-to-color) 100%);
     background-position: 0 100%;
     background-size: 100% 20px;

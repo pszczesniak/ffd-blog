@@ -37,4 +37,13 @@
 
         @include sizeAboveFullHD('font-size', 18);
     }
+
+    img {
+        width: calc(100% + 200px);
+        margin: {
+            top: 2em;
+            bottom: 2em;
+            left: -100px;
+        }
+    }
 }
